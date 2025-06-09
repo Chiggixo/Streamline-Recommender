@@ -28,4 +28,67 @@ A hybrid recommendation system that suggests salon products based on user-produc
 ---
 
 ## 🗂 Project Structure
+Streamline-Recommender/
+├── backend/
+│   ├── main.py
+│   ├── recommender_logic.py
+│   └── fallback.py
+├── src/
+│   ├── recommender.py
+│   ├── content_recommender.py
+│   └── evaluation.py
+├── data/
+│   └── beauty_product_ratings.csv
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── App.js
+│   │   ├── App.css
+│   │   └── index.js
+│   └── package.json
+├── screenshots/
+│   ├── swagger.png
+│   ├── react_output.png
+│   ├── terminal_hybrid.png
+│   └── persona_test.png
+├── docs/
+│   ├── Week1.pdf
+│   └── Week2.pdf
+├── README.md
+└── requirements.txt
 
+## 📥 Installation
+
+### Backend
+```bash
+cd backend
+pip install -r ../requirements.txt
+uvicorn main:app --reload
+
+### frontend
+cd frontend
+npm install
+npm start
+
+### API Usage
+Endpoint
+POST /recommend/
+
+### Sample JSON
+{
+  "user_id": "user_1",
+  "product_name": "Argan Hair Oil",
+  "top_n": 5
+}
+
+🧪 Metrics Evaluated
+Precision@5
+
+Recall@5
+
+Mean Reciprocal Rank (MRR)
+
+👨‍💻 Developed By
+Chirag
+Machine Learning Intern
+Streamline Beauty India Pvt. Ltd.
