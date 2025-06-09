@@ -1,0 +1,25 @@
+.App {
+  padding: 2rem;
+  font-family: sans-serif;
+  max-width: 600px;
+  margin: auto;
+}
+
+form div {
+  margin-bottom: 1rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
