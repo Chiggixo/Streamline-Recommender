@@ -22,7 +22,7 @@ function AdminPanel() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/admin/products/")
+      .get("https://streamline-recommender-ejqq.onrender.com/...")
       .then((res) => setProducts(res.data || []))
       .catch((err) => console.error("Error fetching metadata:", err));
   }, []);
