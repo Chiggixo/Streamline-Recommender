@@ -1,8 +1,11 @@
 import os
 import json
-from backend.utils import load_metadata_dict
-from src.hybrid import generate_hybrid_recommendations
+import sys
 
+from backend.utils import load_metadata_dict
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from src.hybrid import generate_hybrid_recommendations
 def generate_recommendations(user_id: str, product_name: str, top_n: int = 10):
     print(f"⚙️  Recommending for user: {user_id}, product: {product_name}, top_n: {top_n}")
     metadata = load_metadata_dict()
