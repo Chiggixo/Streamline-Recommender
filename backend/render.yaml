@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: streamline-recommender-backend
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host=0.0.0.0 --port=10000"
+    rootDir: .
+    autoDeploy: true
+
+    buildFilter:
+      includedPaths:
+        - "**/*.py"
+        - requirements.txt
+        - ../data/**
+
+    healthCheckPath: "/recommend/"
+
+    envVars:
+      - key: ENV
+        value: production
+
+    secretFiles:
+      - name: .env
+        mountPath: ./
+        contents: |
+          SECRET_KEY=your-secret-key
+          DEBUG=False
