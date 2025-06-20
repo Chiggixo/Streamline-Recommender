@@ -1,6 +1,6 @@
 import os
 import json
-from backend.utils import load_metadata_dict
+from utils import load_metadata_dict
 from src.hybrid import generate_hybrid_recommendations
 
 def generate_recommendations(user_id: str, product_name: str, top_n: int = 10):
