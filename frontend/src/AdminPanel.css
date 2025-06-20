@@ -1,0 +1,44 @@
+.admin-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: sans-serif;
+}
+
+.mode-switch {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin-form input,
+.admin-form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.admin-form button {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  background-color: #2c84ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.admin-form button:hover {
+  background-color: #1f6de0;
+}
+
+.admin-msg {
+  margin-top: 1rem;
+  font-weight: bold;
+}

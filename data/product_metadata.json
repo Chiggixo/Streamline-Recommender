@@ -1,0 +1,82 @@
+[
+  {
+    "product_name": "Beard Trimmer X200",
+    "image_url": "https://m.media-amazon.com/images/I/71SuHqlArrL._AC_SL1500_.jpg",
+    "description": "Rechargeable trimmer with precision blades.",
+    "price": "\u20b91299"
+  },
+  {
+    "product_name": "Keratin Shampoo",
+    "image_url": "https://m.media-amazon.com/images/I/71jio-zSxRL._SL1335_.jpg",
+    "description": "Protein-rich keratin shampoo for smooth hair.",
+    "price": "\u20b9299"
+  },
+  {
+    "product_name": "Argan Hair Oil",
+    "image_url": "https://m.media-amazon.com/images/I/61wqM0Jso2S._SL1500_.jpg",
+    "description": "Lightweight oil with Moroccan argan extract.",
+    "price": "\u20b9499"
+  },
+  {
+    "product_name": "Charcoal Face Wash",
+    "image_url": "https://m.media-amazon.com/images/I/61Rb4czM5AL._SL1500_.jpg",
+    "description": "Deep cleansing face wash with activated charcoal.",
+    "price": "\u20b9299"
+  },
+  {
+    "product_name": "Vitamin C Serum",
+    "image_url": "https://m.media-amazon.com/images/I/61P6v+1NsEL._SL1500_.jpg",
+    "description": "Brightening serum with vitamin C and hyaluronic acid.",
+    "price": "\u20b9449"
+  },
+  {
+    "product_name": "Tea Tree Toner",
+    "image_url": "https://m.media-amazon.com/images/I/714+aaZlH8L._SL1500_.jpg",
+    "description": "Clarifying toner with tea tree oil for acne-prone and oily skin.",
+    "price": "\u20b9299"
+  },
+  {
+    "product_name": "Rosewater Mist",
+    "image_url": "https://m.media-amazon.com/images/I/61AfBO-J4NL._SL1500_.jpg",
+    "description": "Hydrating facial mist infused with pure rosewater for instant refreshment.",
+    "price": "\u20b9199"
+  },
+  {
+    "product_name": "Hair Spa Cream",
+    "image_url": "https://m.media-amazon.com/images/I/61gkFcU2s7L._SL1500_.jpg",
+    "description": "Professional hair spa cream that deeply conditions and revitalizes dry hair.",
+    "price": "\u20b9549"
+  },
+  {
+    "product_name": "Aloe Vera Gel",
+    "image_url": "https://m.media-amazon.com/images/I/61DCkeQVdML._SL1500_.jpg",
+    "description": "Multi-purpose aloe vera gel for hydration, sunburn relief, and skin repair.",
+    "price": "\u20b9149"
+  },
+  {
+    "product_name": "Nail Polish Remover Wipes",
+    "image_url": "https://m.media-amazon.com/images/I/51UD+6BgqzL._SL1440_.jpg",
+    "description": "Acetone-free remover wipes enriched with vitamin E for smooth nails.",
+    "price": "\u20b9150"
+  },
+  {
+    "product_name": "Aloe Vera Moisturizer",
+    "image_url": "https://m.media-amazon.com/images/I/51ZprKpT-sL._SL1200_.jpg",
+    "description": "Soothing and hydrating face moisturizer.",
+    "price": "\u20b9799"
+  },
+  {
+    "product_name": "Arabian Oud Soap",
+    "image_url": "https://m.media-amazon.com/images/I/71yO-yShkgL._SL1500_.jpg",
+    "description": "Oudh soap is often made with natural ingredients that are gentle and nourishing to the skin.",
+    "price": "\u20b9230"
+  },
+  {
+    "product_name": "Lux Essence Bodywash",
+    "image_url": "https://m.media-amazon.com/images/I/513MdIe998L._SL1000_.jpg",
+    "description": " Himalayas Lavender & Vitamin C Illuminating Bodywash 400 ml",
+    "price": "\u20b9285",
+    "category": "Skin care",
+    "brand": "Lux"
+  }
+]

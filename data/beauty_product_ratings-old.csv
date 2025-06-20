@@ -1,0 +1,61 @@
+user_id,product_id,product_name,category,brand,rating
+user_1,3,Beard Trimmer X200,Tools,Philips,3
+user_1,1,Argan Hair Oil,Hair Care,L'Oréal,4
+user_2,4,Keratin Shampoo,Hair Care,Tresemmé,3
+user_2,5,Vitamin C Serum,Skin Care,Mamaearth,4
+user_3,4,Keratin Shampoo,Hair Care,Tresemmé,4
+user_3,2,Charcoal Face Wash,Skin Care,WOW,5
+user_3,1,Argan Hair Oil,Hair Care,L'Oréal,5
+user_3,3,Beard Trimmer X200,Tools,Philips,4
+user_4,2,Charcoal Face Wash,Skin Care,WOW,3
+user_4,5,Vitamin C Serum,Skin Care,Mamaearth,4
+user_4,4,Keratin Shampoo,Hair Care,Tresemmé,5
+user_4,1,Argan Hair Oil,Hair Care,L'Oréal,5
+user_5,1,Argan Hair Oil,Hair Care,L'Oréal,5
+user_5,4,Keratin Shampoo,Hair Care,Tresemmé,5
+user_6,1,Argan Hair Oil,Hair Care,L'Oréal,4
+user_6,3,Beard Trimmer X200,Tools,Philips,4
+user_6,2,Charcoal Face Wash,Skin Care,WOW,5
+user_6,4,Keratin Shampoo,Hair Care,Tresemmé,3
+user_7,1,Argan Hair Oil,Hair Care,L'Oréal,5
+user_7,2,Charcoal Face Wash,Skin Care,WOW,3
+user_7,4,Keratin Shampoo,Hair Care,Tresemmé,3
+user_8,5,Vitamin C Serum,Skin Care,Mamaearth,4
+user_8,2,Charcoal Face Wash,Skin Care,WOW,5
+user_8,4,Keratin Shampoo,Hair Care,Tresemmé,4
+user_8,1,Argan Hair Oil,Hair Care,L'Oréal,3
+user_9,3,Beard Trimmer X200,Tools,Philips,3
+user_9,2,Charcoal Face Wash,Skin Care,WOW,5
+user_9,4,Keratin Shampoo,Hair Care,Tresemmé,4
+user_10,3,Beard Trimmer X200,Tools,Philips,5
+user_10,5,Vitamin C Serum,Skin Care,Mamaearth,3
+user_11,1,Argan Hair Oil,Hair Care,L'Oréal,5
+user_11,5,Vitamin C Serum,Skin Care,Mamaearth,4
+user_11,3,Beard Trimmer X200,Tools,Philips,3
+user_12,4,Keratin Shampoo,Hair Care,Tresemmé,3
+user_12,2,Charcoal Face Wash,Skin Care,WOW,4
+user_12,5,Vitamin C Serum,Skin Care,Mamaearth,4
+user_13,5,Vitamin C Serum,Skin Care,Mamaearth,3
+user_13,3,Beard Trimmer X200,Tools,Philips,4
+user_14,2,Charcoal Face Wash,Skin Care,WOW,5
+user_14,1,Argan Hair Oil,Hair Care,L'Oréal,5
+user_14,3,Beard Trimmer X200,Tools,Philips,3
+user_15,2,Charcoal Face Wash,Skin Care,WOW,5
+user_15,4,Keratin Shampoo,Hair Care,Tresemmé,3
+user_15,1,Argan Hair Oil,Hair Care,L'Oréal,3
+user_15,3,Beard Trimmer X200,Tools,Philips,5
+user_16,3,Beard Trimmer X200,Tools,Philips,3
+user_16,1,Argan Hair Oil,Hair Care,L'Oréal,4
+user_16,5,Vitamin C Serum,Skin Care,Mamaearth,5
+user_17,2,Charcoal Face Wash,Skin Care,WOW,3
+user_17,3,Beard Trimmer X200,Tools,Philips,4
+user_17,1,Argan Hair Oil,Hair Care,L'Oréal,5
+user_18,3,Beard Trimmer X200,Tools,Philips,3
+user_18,2,Charcoal Face Wash,Skin Care,WOW,3
+user_19,1,Argan Hair Oil,Hair Care,L'Oréal,3
+user_19,3,Beard Trimmer X200,Tools,Philips,5
+user_19,2,Charcoal Face Wash,Skin Care,WOW,4
+user_20,3,Beard Trimmer X200,Tools,Philips,5
+user_20,5,Vitamin C Serum,Skin Care,Mamaearth,5
+user_20,1,Argan Hair Oil,Hair Care,L'Oréal,5
+user_20,4,Keratin Shampoo,Hair Care,Tresemmé,5

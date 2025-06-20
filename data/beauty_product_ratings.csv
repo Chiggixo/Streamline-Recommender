@@ -1,0 +1,110 @@
+user_id,product_id,product_name,category,brand,rating
+user_1,4,Keratin Shampoo,Hair Care,Tresemmé,4
+user_1,2,Charcoal Face Wash,Skin Care,WOW,3
+user_1,10,Nail Polish Remover Wipes,Tools,Colorbar,5
+user_1,5,Vitamin C Serum,Skin Care,Mamaearth,4
+user_1,6,Tea Tree Toner,Skin Care,Biotique,4
+user_1,13,Arabian Oud Soap,Skin Care,Oudh,4
+user_2,13,Arabian Oud Soap,Skin Care,Oudh,3
+user_2,3,Beard Trimmer X200,Tools,Philips,3
+user_2,2,Charcoal Face Wash,Skin Care,WOW,5
+user_2,7,Rosewater Mist,Skin Care,Khadi,5
+user_2,5,Vitamin C Serum,Skin Care,Mamaearth,3
+user_2,10,Nail Polish Remover Wipes,Tools,Colorbar,4
+user_3,13,Arabian Oud Soap,Skin Care,Oudh,5
+user_3,1,Argan Hair Oil,Hair Care,L'Oréal,5
+user_3,5,Vitamin C Serum,Skin Care,Mamaearth,3
+user_3,2,Charcoal Face Wash,Skin Care,WOW,5
+user_3,7,Rosewater Mist,Skin Care,Khadi,5
+user_3,10,Nail Polish Remover Wipes,Tools,Colorbar,5
+user_3,9,Aloe Vera Gel,Skin Care,Patanjali,3
+user_4,2,Charcoal Face Wash,Skin Care,WOW,5
+user_4,10,Nail Polish Remover Wipes,Tools,Colorbar,5
+user_4,6,Tea Tree Toner,Skin Care,Biotique,3
+user_4,7,Rosewater Mist,Skin Care,Khadi,3
+user_5,6,Tea Tree Toner,Skin Care,Biotique,3
+user_5,5,Vitamin C Serum,Skin Care,Mamaearth,4
+user_5,4,Keratin Shampoo,Hair Care,Tresemmé,3
+user_5,2,Charcoal Face Wash,Skin Care,WOW,5
+user_5,3,Beard Trimmer X200,Tools,Philips,3
+user_6,10,Nail Polish Remover Wipes,Tools,Colorbar,5
+user_6,3,Beard Trimmer X200,Tools,Philips,3
+user_6,9,Aloe Vera Gel,Skin Care,Patanjali,4
+user_6,6,Tea Tree Toner,Skin Care,Biotique,5
+user_6,2,Charcoal Face Wash,Skin Care,WOW,3
+user_7,6,Tea Tree Toner,Skin Care,Biotique,3
+user_7,4,Keratin Shampoo,Hair Care,Tresemmé,5
+user_7,5,Vitamin C Serum,Skin Care,Mamaearth,3
+user_7,9,Aloe Vera Gel,Skin Care,Patanjali,3
+user_7,3,Beard Trimmer X200,Tools,Philips,5
+user_7,10,Nail Polish Remover Wipes,Tools,Colorbar,3
+user_8,2,Charcoal Face Wash,Skin Care,WOW,3
+user_8,1,Argan Hair Oil,Hair Care,L'Oréal,4
+user_8,6,Tea Tree Toner,Skin Care,Biotique,4
+user_8,7,Rosewater Mist,Skin Care,Khadi,4
+user_8,3,Beard Trimmer X200,Tools,Philips,5
+user_8,4,Keratin Shampoo,Hair Care,Tresemmé,4
+user_9,5,Vitamin C Serum,Skin Care,Mamaearth,4
+user_9,6,Tea Tree Toner,Skin Care,Biotique,5
+user_9,7,Rosewater Mist,Skin Care,Khadi,4
+user_9,3,Beard Trimmer X200,Tools,Philips,4
+user_9,1,Argan Hair Oil,Hair Care,L'Oréal,3
+user_10,1,Argan Hair Oil,Hair Care,L'Oréal,3
+user_10,9,Aloe Vera Gel,Skin Care,Patanjali,4
+user_10,4,Keratin Shampoo,Hair Care,Tresemmé,4
+user_10,3,Beard Trimmer X200,Tools,Philips,3
+user_11,5,Vitamin C Serum,Skin Care,Mamaearth,3
+user_11,4,Keratin Shampoo,Hair Care,Tresemmé,3
+user_11,7,Rosewater Mist,Skin Care,Khadi,3
+user_11,9,Aloe Vera Gel,Skin Care,Patanjali,4
+user_11,1,Argan Hair Oil,Hair Care,L'Oréal,4
+user_11,2,Charcoal Face Wash,Skin Care,WOW,5
+user_12,2,Charcoal Face Wash,Skin Care,WOW,5
+user_12,3,Beard Trimmer X200,Tools,Philips,4
+user_12,1,Argan Hair Oil,Hair Care,L'Oréal,4
+user_12,7,Rosewater Mist,Skin Care,Khadi,4
+user_12,4,Keratin Shampoo,Hair Care,Tresemmé,3
+user_12,9,Aloe Vera Gel,Skin Care,Patanjali,4
+user_13,1,Argan Hair Oil,Hair Care,L'Oréal,3
+user_13,4,Keratin Shampoo,Hair Care,Tresemmé,4
+user_13,8,Hair Spa Cream,Hair Care,L'Oréal,5
+user_13,5,Vitamin C Serum,Skin Care,Mamaearth,5
+user_13,7,Rosewater Mist,Skin Care,Khadi,3
+user_14,2,Charcoal Face Wash,Skin Care,WOW,3
+user_14,5,Vitamin C Serum,Skin Care,Mamaearth,5
+user_14,4,Keratin Shampoo,Hair Care,Tresemmé,5
+user_14,9,Aloe Vera Gel,Skin Care,Patanjali,3
+user_15,7,Rosewater Mist,Skin Care,Khadi,3
+user_15,6,Tea Tree Toner,Skin Care,Biotique,5
+user_15,1,Argan Hair Oil,Hair Care,L'Oréal,5
+user_15,9,Aloe Vera Gel,Skin Care,Patanjali,3
+user_15,5,Vitamin C Serum,Skin Care,Mamaearth,4
+user_15,4,Keratin Shampoo,Hair Care,Tresemmé,3
+user_16,1,Argan Hair Oil,Hair Care,L'Oréal,3
+user_16,9,Aloe Vera Gel,Skin Care,Patanjali,5
+user_16,6,Tea Tree Toner,Skin Care,Biotique,4
+user_16,2,Charcoal Face Wash,Skin Care,WOW,4
+user_16,5,Vitamin C Serum,Skin Care,Mamaearth,3
+user_17,6,Tea Tree Toner,Skin Care,Biotique,5
+user_17,1,Argan Hair Oil,Hair Care,L'Oréal,4
+user_17,3,Beard Trimmer X200,Tools,Philips,5
+user_17,8,Hair Spa Cream,Hair Care,L'Oréal,5
+user_17,10,Nail Polish Remover Wipes,Tools,Colorbar,5
+user_18,9,Aloe Vera Gel,Skin Care,Patanjali,5
+user_18,7,Rosewater Mist,Skin Care,Khadi,3
+user_18,10,Nail Polish Remover Wipes,Tools,Colorbar,4
+user_18,6,Tea Tree Toner,Skin Care,Biotique,5
+user_19,1,Argan Hair Oil,Hair Care,L'Oréal,3
+user_19,6,Tea Tree Toner,Skin Care,Biotique,3
+user_19,7,Rosewater Mist,Skin Care,Khadi,4
+user_19,9,Aloe Vera Gel,Skin Care,Patanjali,3
+user_19,10,Nail Polish Remover Wipes,Tools,Colorbar,5
+user_20,9,Aloe Vera Gel,Skin Care,Patanjali,5
+user_20,8,Hair Spa Cream,Hair Care,L'Oréal,4
+user_20,7,Rosewater Mist,Skin Care,Khadi,5
+user_20,3,Beard Trimmer X200,Tools,Philips,4
+user_20,1,Argan Hair Oil,Hair Care,L'Oréal,4
+user_20,4,Keratin Shampoo,Hair Care,Tresemmé,5
+user_21,11,Aloe Vera Moisturizer,Skin Care,MamaEarth,5
+admin_test_user,12,Arabian Oud Soap,Skin Care,VITMINVEDA,5
+admin_test_user,13,Lux Essence Bodywash,Skin care,Lux,5

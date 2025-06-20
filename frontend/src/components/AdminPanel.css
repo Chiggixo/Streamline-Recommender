@@ -1,0 +1,89 @@
+.admin-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: sans-serif;
+}
+
+.mode-switch {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin-form input,
+.admin-form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.admin-form button {
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  background-color: #2c84ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.admin-form button:hover {
+  background-color: #1f6de0;
+}
+
+.admin-msg {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+.admin-panel {
+  padding: 20px;
+}
+
+.form-section input {
+  margin: 6px;
+  padding: 8px;
+  width: 220px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.form-section button {
+  padding: 8px 16px;
+  margin-top: 10px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.grid-card {
+  width: 160px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-thumb {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 8px;
+}
