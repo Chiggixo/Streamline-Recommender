@@ -1,15 +1,14 @@
-# render.yaml - for Streamline Backend FastAPI Deployment
 services:
   - type: web
     name: streamline-recommender-backend
     env: python
     region: oregon
     plan: free
-    buildCommand: "pip install -r frontend/requirements.txt"
-    startCommand: "uvicorn main:app --host=0.0.0.0 --port=10000"
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn backend.main:app --host=0.0.0.0 --port=10000"
     runtime: python
     autoDeploy: true
-    rootDir: backend
+    rootDir: .  # ✅ This is correct now (not product-recommender)
 
     envVars:
       - key: ENV
@@ -18,17 +17,16 @@ services:
     buildFilter:
       includedPaths:
         - backend/**
-        - data/product_metadata.json
-        - data/beauty_product_ratings.csv
+        - src/**
+        - data/**
         - requirements.txt
       ignoredPaths:
         - frontend/**
-        - README.md
         - .gitignore
-        - .env
+        - README.md
 
     healthCheckPath: "/recommend/"
-    preDeployCommand: "echo Running any DB migrations or static setup if needed"
+    preDeployCommand: "echo Predeploy setup done"
 
     secretFiles:
       - name: .env
