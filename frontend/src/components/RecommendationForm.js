@@ -28,7 +28,7 @@ function RecommendationForm() {
     e.preventDefault();
     setShowResults(false);
     try {
-      const response = await axios.post("http://127.0.0.1:8000/recommend/", {
+      const response = await axios.post("https://streamline-recommender-ejqq.onrender.com/...", {
         user_id: userId,
         product_name: productName,
         top_n: Number(topN),
