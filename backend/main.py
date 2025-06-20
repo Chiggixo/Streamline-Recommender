@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from recommender_logic import generate_recommendations
-from admin_api import admin_router
+from backend.recommender_logic import generate_recommendations
+from backend.admin_api import admin_router
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
