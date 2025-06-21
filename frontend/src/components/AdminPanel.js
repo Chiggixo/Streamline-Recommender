@@ -3,6 +3,8 @@ import axios from "axios";
 import "./AdminPanel.css";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
+const BASE_URL = process.env.REACT_APP_BACKEND_URL;
+
 
 function AdminPanel() {
   const [products, setProducts] = useState([]);
@@ -23,7 +25,7 @@ function AdminPanel() {
 
   useEffect(() => {
     axios
-      .get("https://streamline-recommender-ab7v.onrender.com/admin/products/")
+      .get(`${BASE_URL}/admin/product-names/`)
       .then((res) => setProducts(res.data || []))
       .catch((err) => console.error("Error fetching metadata:", err));
   }, []);
@@ -31,8 +33,7 @@ function AdminPanel() {
   const handleAddOrUpdate = async () => {
     try {
       const res = await axios.post(
-        "https://streamline-recommender-ab7v.onrender.com/admin/add-product/",
-        newProduct
+        `${BASE_URL}/admin/add-product/`, newProduct
       );
       if (res.status === 200) {
         setSnackbar({
