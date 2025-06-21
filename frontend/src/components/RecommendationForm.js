@@ -13,9 +13,9 @@ function RecommendationForm() {
   // ✅ Fetch product list from backend
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/admin/product-names/")
+      .get("https://streamline-recommender-ab7v.onrender.com/admin/product-names/")
       .then((res) => {
-        console.log("Product list fetched:", res.data);  // ✅ debug line
+        console.log("Product list fetched:", res.data);
         setProductList(res.data || []);
       })
       .catch((err) => {
@@ -28,11 +28,14 @@ function RecommendationForm() {
     e.preventDefault();
     setShowResults(false);
     try {
-      const response = await axios.post("https://streamline-recommender-ejqq.onrender.com/...", {
-        user_id: userId,
-        product_name: productName,
-        top_n: Number(topN),
-      });
+      const response = await axios.post(
+        "https://streamline-recommender-ab7v.onrender.com/recommend/",
+        {
+          user_id: userId,
+          product_name: productName,
+          top_n: Number(topN),
+        }
+      );
       setRecommendations(response.data.recommended_products || []);
       setTimeout(() => setShowResults(true), 300);
     } catch (error) {
@@ -51,7 +54,7 @@ function RecommendationForm() {
             type="text"
             value={userId}
             onChange={(e) => setUserId(e.target.value)}
-            placeholder="e.g. chirag23 or user_1"
+            placeholder="e.g. user_1"
             required
           />
         </div>
@@ -74,13 +77,12 @@ function RecommendationForm() {
 
         <div className="input-group">
           <label>
-            Top N Recommendations{" "}
-            {productList.length > 0 && `(max ${productList.length})`}
+            Top N Recommendations {productList.length > 0 && `(max ${productList.length})`}
           </label>
           <input
             type="number"
             min={1}
-            max={productList.length > 0 ? productList.length : 10}  // fallback to 10
+            max={productList.length > 0 ? productList.length : 10}
             value={topN}
             onChange={(e) => setTopN(Number(e.target.value))}
             required
