@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./RecommendationForm.css";
+const BASE_URL = process.env.REACT_APP_BACKEND_URL;
+
 
 function RecommendationForm() {
   const [userId, setUserId] = useState("");
@@ -13,7 +15,7 @@ function RecommendationForm() {
   // ✅ Fetch product list from backend
   useEffect(() => {
     axios
-      .get("https://streamline-recommender-ab7v.onrender.com/admin/product-names/")
+      .get(`${BASE_URL}/admin/product-names/`)
       .then((res) => {
         console.log("Product list fetched:", res.data);
         setProductList(res.data || []);
@@ -29,7 +31,7 @@ function RecommendationForm() {
     setShowResults(false);
     try {
       const response = await axios.post(
-        "https://streamline-recommender-ab7v.onrender.com/recommend/",
+        `${BASE_URL}/recommend/`,
         {
           user_id: userId,
           product_name: productName,
