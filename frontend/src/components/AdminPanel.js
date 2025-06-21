@@ -11,9 +11,10 @@ function AdminPanel() {
     image_url: "",
     description: "",
     price: "",
-    category: "",      // ✅ New field
-    brand: "",         // ✅ New field
+    category: "",
+    brand: "",
   });
+
   const [snackbar, setSnackbar] = useState({
     open: false,
     message: "",
@@ -22,14 +23,17 @@ function AdminPanel() {
 
   useEffect(() => {
     axios
-      .get("https://streamline-recommender-ejqq.onrender.com/...")
+      .get("https://streamline-recommender-ab7v.onrender.com/admin/products/")
       .then((res) => setProducts(res.data || []))
       .catch((err) => console.error("Error fetching metadata:", err));
   }, []);
 
   const handleAddOrUpdate = async () => {
     try {
-      const res = await axios.post("http://127.0.0.1:8000/admin/add-product/", newProduct);
+      const res = await axios.post(
+        "https://streamline-recommender-ab7v.onrender.com/admin/add-product/",
+        newProduct
+      );
       if (res.status === 200) {
         setSnackbar({
           open: true,
