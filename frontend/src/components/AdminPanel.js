@@ -3,8 +3,8 @@ import axios from "axios";
 import "./AdminPanel.css";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
-const BASE_URL = process.env.REACT_APP_BACKEND_URL;
 
+const BASE_URL = process.env.REACT_APP_BACKEND_URL;
 
 function AdminPanel() {
   const [products, setProducts] = useState([]);
@@ -25,16 +25,14 @@ function AdminPanel() {
 
   useEffect(() => {
     axios
-      .get(`${BASE_URL}/admin/product-names/`)
+      .get(`${BASE_URL}/admin/products/`)
       .then((res) => setProducts(res.data || []))
       .catch((err) => console.error("Error fetching metadata:", err));
   }, []);
 
   const handleAddOrUpdate = async () => {
     try {
-      const res = await axios.post(
-        `${BASE_URL}/admin/add-product/`, newProduct
-      );
+      const res = await axios.post(`${BASE_URL}/admin/add-product/`, newProduct);
       if (res.status === 200) {
         setSnackbar({
           open: true,
@@ -60,6 +58,7 @@ function AdminPanel() {
   return (
     <div className="admin-panel">
       <h2>Admin Panel</h2>
+
       <div className="form-section">
         <input name="product_name" placeholder="Product Name" onChange={handleChange} />
         <input name="image_url" placeholder="Image URL" onChange={handleChange} />
@@ -74,7 +73,15 @@ function AdminPanel() {
       <div className="product-grid">
         {products.map((prod, idx) => (
           <div className="grid-card" key={idx}>
-            <img src={prod.image_url} alt={prod.product_name} className="product-thumb" />
+            <img
+              src={prod.image_url || "https://via.placeholder.com/150"}
+              alt={prod.product_name}
+              className="product-thumb"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = "https://via.placeholder.com/150";
+              }}
+            />
             <h4>{prod.product_name}</h4>
             <h5>{prod.description}</h5>
             <p>{prod.price}</p>
