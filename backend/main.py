@@ -6,9 +6,10 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+# ✅ Enable CORS for frontend communication
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  # You can restrict this to Netlify domain after deployment
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
