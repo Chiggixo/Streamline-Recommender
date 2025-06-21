@@ -1,108 +1,49 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import "./AdminPanel.css";
-import Snackbar from "@mui/material/Snackbar";
-import Alert from "@mui/material/Alert";
+from fastapi import APIRouter, HTTPException
+from backend.firebase_config import firestore_db
+from pydantic import BaseModel
 
-const BASE_URL = process.env.REACT_APP_BACKEND_URL;
+admin_router = APIRouter(prefix="/admin")
 
-function AdminPanel() {
-  const [products, setProducts] = useState([]);
-  const [newProduct, setNewProduct] = useState({
-    product_name: "",
-    image_url: "",
-    description: "",
-    price: "",
-    category: "",
-    brand: "",
-  });
 
-  const [snackbar, setSnackbar] = useState({
-    open: false,
-    message: "",
-    severity: "success",
-  });
+# ✅ Define Product Schema
+class Product(BaseModel):
+    product_name: str
+    image_url: str
+    description: str
+    price: str
+    category: str
+    brand: str
 
-  useEffect(() => {
-    axios
-      .get(`${BASE_URL}/admin/products/`)
-      .then((res) => setProducts(res.data || []))
-      .catch((err) => console.error("Error fetching metadata:", err));
-  }, []);
 
-  const handleAddOrUpdate = async () => {
-    try {
-      const res = await axios.post(`${BASE_URL}/admin/add-product/`, newProduct);
-      if (res.status === 200) {
-        setSnackbar({
-          open: true,
-          message: "✅ Product added/updated successfully!",
-          severity: "success",
-        });
-        setProducts((prev) => [...prev, newProduct]);
-      }
-    } catch (err) {
-      console.error("Error adding product:", err);
-      setSnackbar({
-        open: true,
-        message: "❌ Failed to add product",
-        severity: "error",
-      });
-    }
-  };
+# ✅ Add or update product in Firestore
+@admin_router.post("/add-product/")
+def add_product(product: Product):
+    try:
+        doc_ref = firestore_db.collection("products").document(product.product_name)
+        doc_ref.set(product.dict())  # set() creates or updates
+        return {"message": "✅ Product added/updated successfully"}
+    except Exception as e:
+        print("❌ Firebase error:", str(e))
+        raise HTTPException(status_code=500, detail="Failed to add product")
 
-  const handleChange = (e) => {
-    setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
-  };
 
-  return (
-    <div className="admin-panel">
-      <h2>Admin Panel</h2>
+# ✅ Get product names for dropdown
+@admin_router.get("/product-names/")
+def get_product_names():
+    try:
+        docs = firestore_db.collection("products").stream()
+        return [doc.id for doc in docs]
+    except Exception as e:
+        print("❌ Firebase fetch error:", str(e))
+        raise HTTPException(status_code=500, detail="Failed to fetch product names")
 
-      <div className="form-section">
-        <input name="product_name" placeholder="Product Name" onChange={handleChange} />
-        <input name="image_url" placeholder="Image URL" onChange={handleChange} />
-        <input name="description" placeholder="Description" onChange={handleChange} />
-        <input name="price" placeholder="Price (₹499)" onChange={handleChange} />
-        <input name="category" placeholder="Category (e.g. Skin Care)" onChange={handleChange} />
-        <input name="brand" placeholder="Brand (e.g. Mamaearth)" onChange={handleChange} />
-        <button onClick={handleAddOrUpdate}>Add / Update Product</button>
-      </div>
 
-      <h3>All Products</h3>
-      <div className="product-grid">
-        {products.map((prod, idx) => (
-          <div className="grid-card" key={idx}>
-            <img
-              src={prod.image_url || "https://via.placeholder.com/150"}
-              alt={prod.product_name}
-              className="product-thumb"
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = "https://via.placeholder.com/150";
-              }}
-            />
-            <h4>{prod.product_name}</h4>
-            <h5>{prod.description}</h5>
-            <p>{prod.price}</p>
-          </div>
-        ))}
-      </div>
-
-      <Snackbar
-        open={snackbar.open}
-        autoHideDuration={3000}
-        onClose={() => setSnackbar({ ...snackbar, open: false })}
-      >
-        <Alert
-          onClose={() => setSnackbar({ ...snackbar, open: false })}
-          severity={snackbar.severity}
-        >
-          {snackbar.message}
-        </Alert>
-      </Snackbar>
-    </div>
-  );
-}
-
-export default AdminPanel;
+# ✅ Get all product metadata
+@admin_router.get("/products/")
+def get_all_products():
+    try:
+        docs = firestore_db.collection("products").stream()
+        return [doc.to_dict() for doc in docs]
+    except Exception as e:
+        print("❌ Firebase read error:", str(e))
+        raise HTTPException(status_code=500, detail="Failed to load products")
