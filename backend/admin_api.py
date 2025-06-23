@@ -11,9 +11,8 @@ CSV_PATH = os.path.abspath("data/beauty_product_ratings.csv")
 @admin_router.get("/product-names/")
 def get_metadata_names():
     try:
-        products_ref = firestore_db.collection("products")
-        docs = products_ref.stream()
-        names = [doc.to_dict().get("product_name", "") for doc in docs]
+        docs = firestore_db.collection("products").stream()
+        names = [str(doc.to_dict().get("product_name", "")).strip() for doc in docs]
         return [name for name in names if name]
     except Exception as e:
         print("❌ Failed to load product names:", e)
@@ -23,8 +22,7 @@ def get_metadata_names():
 @admin_router.get("/products/")
 def get_all_products():
     try:
-        products_ref = firestore_db.collection("products")
-        docs = products_ref.stream()
+        docs = firestore_db.collection("products").stream()
         return [doc.to_dict() for doc in docs]
     except Exception as e:
         print("❌ Error fetching from Firestore:", e)
@@ -34,16 +32,19 @@ def get_all_products():
 @admin_router.post("/add-product/")
 def add_or_update_product(product: dict):
     try:
-        product_name = product.get("product_name")
+        product_name = str(product.get("product_name", "")).strip()
         if not product_name:
             raise HTTPException(status_code=400, detail="Missing product_name")
 
+        # ✅ Store in Firestore
         doc_ref = firestore_db.collection("products").document(product_name)
         doc_ref.set(product, merge=True)
 
-        # Write to CSV (append)
-        category = product.get("category", "Misc")
-        brand = product.get("brand", "Unknown")
+        # ✅ Prepare values
+        category = str(product.get("category", "Misc"))
+        brand = str(product.get("brand", "Unknown"))
+
+        # ✅ Append to CSV
         with open(CSV_PATH, "a", newline='', encoding="utf-8") as f:
             writer = csv.writer(f)
             writer.writerow([
@@ -52,11 +53,10 @@ def add_or_update_product(product: dict):
                 product_name,
                 category,
                 brand,
-                5  # default rating
+                5  # Simulated default rating
             ])
 
         return {"message": "✅ Product added/updated successfully!"}
-
     except Exception as e:
         print("❌ Error in add_or_update_product:", e)
         raise HTTPException(status_code=500, detail="Failed to add product")
