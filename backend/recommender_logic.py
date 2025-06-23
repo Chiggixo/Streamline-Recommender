@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-def generate_recommendations(user_id: str, product_name: str, top_n: min(top_n, len(df) - 1):
+def generate_recommendations(user_id: str, product_name: str, top_n: min(top_n, len(df) ):
     print(f"⚙️  Recommending for user: {user_id}, product: {product_name}, top_n: {top_n}")
 
     # ✅ Fetch product metadata from Firebase
