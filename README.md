@@ -36,7 +36,7 @@ Duration: 45 Days
 
 | Service        | URL                                                     |
 | -------------- | ------------------------------------------------------- |
-| 🔗 Frontend    | [Netlify Live](https://your-netlify-app.netlify.app)    |
+| 🔗 Frontend    | [Netlify Live](https://streamline-beauty-recommendation.netlify.app/)    |
 | 🔌 Backend API | [Swagger UI](https://your-render-api.onrender.com/docs) |
 
 ---
